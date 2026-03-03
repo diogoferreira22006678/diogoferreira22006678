@@ -85,30 +85,11 @@ Building intelligent systems grounded in real-world data.
 
 ---
 
-# 📊 GitHub Analytics
-
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=diogoferreira22006678&show_icons=true&theme=tokyonight&hide_border=true" height="170"/>
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=diogoferreira22006678&layout=compact&theme=tokyonight&hide_border=true" height="170"/>
-</p>
-
----
-
 # 🔥 Contribution Streak
 
 <p align="center">
   <img src="https://github-readme-streak-stats.herokuapp.com/?user=diogoferreira22006678&theme=tokyonight&hide_border=true"/>
 </p>
-
----
-
-# 🐍 Contribution Snake
-
-<p align="center">
-  <img src="https://github.com/diogoferreira22006678/diogoferreira22006678/blob/output/github-contribution-grid-snake.svg" />
-</p>
-
-⚠️ (Depois posso ensinar-te a ativar o GitHub Action para gerar automaticamente o snake animation.)
 
 ---
 
