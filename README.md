@@ -1,16 +1,71 @@
-## Hi there 👋
+# Diogo Ferreira
 
-<!--
-**diogoferreira22006678/diogoferreira22006678** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+AI Engineer building production-ready LLM and RAG systems.
 
-Here are some ideas to get you started:
+Currently working on:
+- Retrieval-Augmented Generation (RAG)
+- Vector Databases & Embeddings
+- Applied NLP Systems
+- End-to-End AI Architectures
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+---
+
+## 🚀 Featured Projects
+
+### 🧠 LusoChat — AI Academic Assistant (RAG System)
+Production-grade AI assistant using:
+- FastAPI backend
+- Gemini API
+- SentenceTransformers embeddings
+- Vector similarity search
+- SQL data grounding
+
+→ Intelligent intent detection
+→ Two-stage inference pipeline
+→ Real-time AI-powered responses
+
+---
+
+### 🎨 Cyanotypes — AI Matchmaking Platform
+NLP-based matching engine connecting creative professionals:
+- Text embeddings
+- Vector similarity ranking
+- AI-driven profile matching
+- Dockerized inference services
+
+---
+
+## 🛠 Tech Stack
+
+**Languages**
+Python · PHP · JavaScript · SQL
+
+**AI & NLP**
+RAG · LLM APIs · Text Embeddings · Vector Databases · SentenceTransformers
+
+**Backend**
+FastAPI · Laravel · REST APIs
+
+**DevOps**
+Docker · Git
+
+---
+
+## 📊 GitHub Stats
+![GitHub Stats](https://github-readme-stats.vercel.app/api?username=diogoferreira22006678&show_icons=true&theme=tokyonight)
+
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=diogoferreira22006678&layout=compact&theme=tokyonight)
+
+---
+
+## 🌍 International Technical Representation
+Presented AI systems in:
+- Belgium
+- Italy
+- Czech Republic
+
+---
+
+## 📫 Connect
+LinkedIn: ![Click Here](https://www.linkedin.com/in/diogo-ferreira-6731a1209/)
+Email: diomferreira@gmail.com
