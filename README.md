@@ -1,6 +1,8 @@
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0F172A,50:1E293B,100:243B55&height=230&section=header&text=Diogo%20Ferreira&fontSize=46&fontColor=ffffff&animation=fadeIn&fontAlignY=36&desc=AI%20Engineer%20%20%7C%20%20LLM%20%26%20Agentic%20Systems%20%20%7C%20%20RAG&descAlignY=56&descSize=17"/>
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0F172A,50:1E293B,100:243B55&height=200&section=header&text=Diogo%20Ferreira&fontSize=48&fontColor=ffffff&fontAlignY=40" alt="Diogo Ferreira"/>
 </p>
+
+<h3 align="center">AI Engineer &nbsp;|&nbsp; LLM &amp; Agentic Systems &nbsp;|&nbsp; RAG</h3>
 
 <p align="center">
   <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=19&duration=2800&pause=900&color=7AA2F7&center=true&vCenter=true&width=640&lines=Multi-agent+LLM+pipelines+on+Amazon+Bedrock;Retrieval+grounded+in+real+knowledge;Evaluation+before+deployment;From+prototype+to+production" alt="typing"/>
@@ -24,32 +26,67 @@ MSc in Data Science.
 
 ## <img src="https://api.iconify.design/lucide/cpu.svg?color=%237aa2f7" width="22" align="top"/> Current Work
 
+### Enterprise Ticket Triage with AI Agents
+<sub>Closer &nbsp;|&nbsp; client project &nbsp;|&nbsp; Amazon Bedrock &nbsp;|&nbsp; AWS Serverless</sub>
+
+A multi-agent system that takes incoming Jira service tickets for an industrial client and handles them end to end: it checks that the ticket is complete, sends it to the right team and drafts an answer grounded in the client's own documentation and ticket history. I work on development and on the architecture decisions.
+
+```mermaid
+flowchart LR
+    J[Jira ticket] --> Q[Qualification agent]
+    Q -->|complete and classified| R[Routing agent]
+    Q -->|missing fields| J
+    R --> S[Support agent]
+    R -.->|lookup| M[(Routing matrix)]
+    S -.->|retrieval| KB[(Bedrock Knowledge Bases)]
+    S --> C[Comment on ticket]
+    R --> T[Teams notification]
+```
+
 <table>
 <tr>
-<td width="60%" valign="top">
+<td width="50%" valign="top">
 
-**Enterprise ticket triage with AI agents**<br/>
-<sub>Closer, client project</sub>
+**Agents**
 
-A multi-agent pipeline on **Amazon Bedrock** that qualifies, routes and supports Jira service tickets for an industrial client.
+<img src="https://api.iconify.design/lucide/chevron-right.svg?color=%2364748b" width="14"/> <b>Qualification</b> classifies the ticket and flags missing information<br/>
+<img src="https://api.iconify.design/lucide/chevron-right.svg?color=%2364748b" width="14"/> <b>Routing</b> assigns it to the right resolver group from a rules matrix<br/>
+<img src="https://api.iconify.design/lucide/chevron-right.svg?color=%2364748b" width="14"/> <b>Support</b> drafts a response using retrieval over documentation and past tickets<br/>
 
-<img src="https://api.iconify.design/lucide/chevron-right.svg?color=%2364748b" width="14"/> Specialised agents for qualification, routing and support<br/>
-<img src="https://api.iconify.design/lucide/chevron-right.svg?color=%2364748b" width="14"/> Event-driven, serverless architecture on AWS<br/>
-<img src="https://api.iconify.design/lucide/chevron-right.svg?color=%2364748b" width="14"/> Knowledge-base retrieval and taxonomy-driven routing<br/>
-<img src="https://api.iconify.design/lucide/chevron-right.svg?color=%2364748b" width="14"/> Jira and Microsoft Teams integrations
+**Knowledge ingestion**
+
+<img src="https://api.iconify.design/lucide/chevron-right.svg?color=%2364748b" width="14"/> Multi-source pipelines from Jira (Cloud and On-Prem), SharePoint and product documentation into Bedrock Knowledge Bases<br/>
+<img src="https://api.iconify.design/lucide/chevron-right.svg?color=%2364748b" width="14"/> Two validation gates, PII redaction, deduplication and a quarantine and remediation loop for bad documents<br/>
 
 </td>
-<td width="40%" valign="top">
+<td width="50%" valign="top">
 
-**Also exploring**
+**Routing that business users can maintain**
 
-<img src="https://api.iconify.design/lucide/gauge.svg?color=%2364748b" width="14"/> Evaluation for agent and RAG reliability<br/>
-<img src="https://api.iconify.design/lucide/layers.svg?color=%2364748b" width="14"/> Multi-stage retrieval and inference<br/>
-<img src="https://api.iconify.design/lucide/container.svg?color=%2364748b" width="14"/> Containerised AI services
+<img src="https://api.iconify.design/lucide/chevron-right.svg?color=%2364748b" width="14"/> The issue-type to resolver mapping lives in an Excel file on SharePoint that non-technical staff edit directly<br/>
+<img src="https://api.iconify.design/lucide/chevron-right.svg?color=%2364748b" width="14"/> Lambda + EventBridge poll it through the Microsoft Graph API, replacing an earlier Power Automate flow<br/>
+
+**Safety and delivery**
+
+<img src="https://api.iconify.design/lucide/chevron-right.svg?color=%2364748b" width="14"/> Bedrock Guardrails in front of the agents, with input tagging to stop false prompt-attack detections on legitimate ticket text<br/>
+<img src="https://api.iconify.design/lucide/chevron-right.svg?color=%2364748b" width="14"/> Event-driven, serverless deployment with separate integration and agent repositories<br/>
+<img src="https://api.iconify.design/lucide/chevron-right.svg?color=%2364748b" width="14"/> Validated in UAT on a test Jira project, now moving to production starting with the knowledge bases and the Qualification agent<br/>
 
 </td>
 </tr>
 </table>
+
+<p>
+  <img src="https://img.shields.io/badge/Amazon%20Bedrock-232F3E?style=flat-square&logo=amazonwebservices&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Bedrock%20Knowledge%20Bases-232F3E?style=flat-square"/>
+  <img src="https://img.shields.io/badge/Bedrock%20Guardrails-232F3E?style=flat-square"/>
+  <img src="https://img.shields.io/badge/AWS%20Lambda-FF9900?style=flat-square&logo=awslambda&logoColor=white"/>
+  <img src="https://img.shields.io/badge/EventBridge-E7157B?style=flat-square&logo=amazoneventbridge&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Jira-0052CC?style=flat-square&logo=jira&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Microsoft%20Graph-5E5E5E?style=flat-square&logo=microsoft&logoColor=white"/>
+</p>
+
+**Also exploring:** evaluation for agent and RAG reliability, multi-stage retrieval and inference, containerised AI services.
 
 <br/>
 
